@@ -9,13 +9,14 @@ do
   if [ $minute -eq 60 ]
   then
     (( minute = 0 ))
+    (( hour++ ))
   fi
 
-  if [ $minute -eq 0 ]
+  if [ $minute -eq 0 -a $hour -le 12 ]
   then
     echo "Hour:" $hour
-    (( hour++ ))
-  else
+  elif [ $hour -ne 13 ]
+  then
     echo $minute
   fi
 
