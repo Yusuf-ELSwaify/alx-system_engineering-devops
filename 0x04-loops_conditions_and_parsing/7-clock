@@ -12,7 +12,7 @@ do
     (( hour++ ))
   fi
 
-  if [ $minute -eq 0 -a $hour -le 12 ]
+  if [ $minute -eq 0 ] && [ $hour -le 12 ]
   then
     echo "Hour:" $hour
   elif [ $hour -ne 13 ]
