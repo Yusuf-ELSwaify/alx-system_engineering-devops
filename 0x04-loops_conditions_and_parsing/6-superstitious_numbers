@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# print from 1 to 20 using while loop and case.
+# on the 4th iteration, print "bad luck from China" first
+# on the 9th iteration, print "bad luck from Japan" first
+# on the 17th iteration, print "bad luck from Italy" first
+
+i=1
+
+while [ $i -le 20 ]
+do
+  echo $i
+  case $i in
+      4)
+          echo "bad luck from China";;
+      9)
+          echo "bad luck from Japan";;
+      17)
+          echo "bad luck from Italy";;
+      esac
+  (( i++ ))
+done
